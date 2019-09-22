@@ -154,7 +154,8 @@ Found 0 results.
 ```
 
 We have no way to query for Padme's child, unless the second object has an attribute such as the following:
-**NOTE: Do not execute this command, it is only for the purpose of discussion)**
+
+**NOTE: Do not execute this command, it is only for the purpose of discussion**
 ```
 INSERT DOCUMENT {"id":"Padme", "child":"Leia"};
 ```
