@@ -473,10 +473,3 @@ To include support for mongodb, the following prerequisites must be manually ins
 NOTE: The find_package() command for mongoc is currently disabled because the default version that is installed on Ubuntu 18.04LTS has some errors in its configuration files.
 
 Nonetheless, the NOQL build will succeed as long as the libmongoc-dev package is installed on the system.
-
-# Notes
-With a connection, you can:
-- Insert all documents from a given module
-- Verify all tests in a given module
-- load all rules in a given module
-- make queries
