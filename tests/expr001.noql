@@ -1,0 +1,15 @@
+RULE expr1(@x,@y, @z) := (@z = @x * @y);
+VERIFY expr1(100, 234, @z) := [expr1(100, 234, 23400)];
+
+RULE expr2(@x,@y, @z) := (@z = @x / @y);
+VERIFY expr2(100.1, 234, @z) := [expr2(100.1, 234, 0.427778)]; //TODO: fix FLOP error
+
+RULE expr3(@x,@y, @z) := (@z = @x + @y - 23);
+VERIFY expr3(100, 234, @z) := [expr3(100, 234, 311)];
+
+RULE expr4(@x,@y, @z) := (@x < @y) && (@z = 1);
+VERIFY expr4(100, 234, @z) := [expr4(100, 234, 1)];
+VERIFY expr4(200, 100, @z) := [];
+
+RULE expr5(@x,@y, @z) := (@x < @y) && (@z = 1);
+VERIFY expr5(200, 100, @z) := [];

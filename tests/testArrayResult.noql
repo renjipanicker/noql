@@ -1,0 +1,4 @@
+INSERT DOCUMENT {"id":"leia", "parent":["padme","anakin"]};
+
+VERIFY parent("leia", @Person) := [parent("leia","padme"), parent("leia","anakin")];
+VERIFY parent(@Person, "padme") := [parent("leia","padme")];

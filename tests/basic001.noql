@@ -1,0 +1,18 @@
+INSERT DOCUMENT {
+    "id":"amitabh",
+    "age":66,
+    "height":190.34,
+    "male":true,
+    "single":false,
+    "nri":null,
+    "children":["abc", "xyz"],
+};
+
+INSERT DOCUMENT {
+    "id":"abhishek",
+    "parent":"amitabh",
+};
+
+RULE father(@x,@y) := parent(@x,@y) && male(@y,true);
+
+VERIFY father("abhishek", @Father) := [father("abhishek","amitabh")];

@@ -1,0 +1,39 @@
+INSERT DOCUMENT {
+    "id":"abhishek",
+    "parent":"amitabh",
+};
+
+INSERT DOCUMENT {
+    "id":"amitabh",
+    "male":true,
+};
+
+INSERT DOCUMENT {
+    "id":"jaya",
+    "child":"shweta",
+};
+
+INSERT DOCUMENT {
+    "id":"padme",
+    "child":"leia",
+};
+
+INSERT DOCUMENT {
+    "id":"leia",
+    "gender":"female",
+};
+
+INSERT DOCUMENT {
+    "id":"shweta",
+    "parent":"jaya",
+    "gender":"female",
+};
+
+RULE mother(@x,@y) := parent(@x,@y) && female(@y,false);
+RULE father(@x,@y) := parent(@x,@y) && male(@y,true);
+RULE daughter(@x,@y) := parent(@y,@x) && gender(@y,"female");
+RULE daughter(@x,@y) := child(@x,@y) && gender(@y,"female");
+RULE parent(@x,@y) := father(@x,@y);
+
+VERIFY daughter("jaya", @Daughter) := [daughter("jaya","shweta")];
+VERIFY daughter("padme", @Daughter) := [daughter("padme","leia")];

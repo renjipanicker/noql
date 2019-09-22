@@ -1,0 +1,7 @@
+INSERT PAIR {
+    "person":"amitabh",
+};
+
+RULE parent(@x,@y) := person(@y);
+
+VERIFY parent("abhishek", @Father) := [parent("abhishek","amitabh")];

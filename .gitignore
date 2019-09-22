@@ -30,3 +30,9 @@
 *.exe
 *.out
 *.app
+
+# noql
+.vscode
+build/
+noql.code-workspace
+

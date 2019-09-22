@@ -1,0 +1,20 @@
+INSERT DOCUMENT {
+    "id":"amitabh",
+    "child":"shweta",
+};
+
+INSERT DOCUMENT {
+    "id":"jaya",
+    "spouse":"amitabh",
+};
+
+INSERT DOCUMENT {
+    "id":"shweta",
+    "gender":"female",
+};
+
+RULE daughter(@x,@y) := parent(@y,@x) && gender(@y,"female");
+RULE parent(@x,@y) := spouse(@y,@z) && parent(@y,@z);
+RULE parent(@x,@y) := child(@y,@x);
+
+VERIFY daughter("jaya", @Daughter) := [daughter("jaya","shweta")];
