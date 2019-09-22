@@ -266,8 +266,10 @@ Found 1 result.
 "adult"("Luke")
 ```
 The currently supported operators are:
+```
 - + - * / %
 - < <= > >= == !=
+```
 
 # Arity
 The arity of a function is the number of arguments that function takes (Arguments, Arity... get it?).
