@@ -10,6 +10,7 @@ It is heavily inspired by Prolog and uses logic programming to form complex quer
 # Build instructions.
 ## 1. Prerequisites and Dependencies:
 The following prerequisites should be installed prior to build are:
+
 |Prerequisite   |Version        |Description      |
 |---------------|---------------|-----------------|
 |clang          |7 and above    |C++17 compiler   |
