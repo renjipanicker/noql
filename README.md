@@ -28,6 +28,7 @@ sudo apt install clang lldb git libpthread-stubs0-dev ninja-build -y
 *NOTE: NOQL requires CMake 3.14 or above. On Ubuntu 18.04LTS, the default version is 3.10, hence we use snap to install version cmake 3.15.*
 
 During the build process, the following dependencies will be automatically downloaded and built:
+
 |Dependency     |Description         |Usage   |Switch        |Default|
 |---------------|--------------------|--------|--------------|-------|
 |lemonex        |Small lexer/parser  |Required|
@@ -463,6 +464,7 @@ After registration, the new adaptor can be used using an appropriate connection 
 
 # Building with support for mongoc
 To include support for mongodb, the following prerequisites must be manually installed.
+
 |Prerequisite   |Version       |Description           |Switch        |Default|
 |---------------|--------------|----------------------|--------------|-------|
 |mongoc         |any latest    |Mongo client library  |ENABLE_MONGOC |OFF    |
