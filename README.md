@@ -68,7 +68,7 @@ ninja
 
 At the end of the build process, the output directory will hold:
 - libnoql.a: A static library that contains the NOQL functionality and can be incorporated into any C++17 project.
-- noql: An REPL shell.
+- noql-cli: An REPL shell.
 
 ## 6. Run noql
 [Optional] You may now run all the unit tests to ensure noql works as expected:
